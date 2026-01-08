@@ -1,6 +1,6 @@
 import { Navigate, Routes, Route } from "react-router"
-import ChatPage from "./pages/chatPage";
-import LoginPage from "./pages/logInPage";
+import ChatPage from "./pages/ChatPage";
+import LoginPage from "./pages/LogInPage";
 import SignUpPage from "./pages/SignUpPage";
 import { useAuthStore } from "./store/useAuthStore";
 import { useEffect } from "react";
