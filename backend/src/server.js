@@ -5,6 +5,7 @@ import messageRoutes from './routes/message.route.js';
 import path from 'path';
 import { connectDB } from './lib/db.js';
 import { ENV } from './lib/env.js';
+import cors from "cors";
 
 
 const app = express();
@@ -14,6 +15,12 @@ const __dirname = path.resolve();
 const PORT = ENV.PORT || 3000;
 
 app.use(express.json()); // req.body
+
+// Ensure CLIENT_URL includes protocol for CORS
+const clientOrigin = ENV.CLIENT_URL;
+const corsOrigin = clientOrigin.startsWith('http') ? clientOrigin : `http://${clientOrigin}`;
+
+app.use(cors({ origin: corsOrigin, credentials: true }));
 app.use(cookieParser()); // req.cookies
 
 app.use('/api/auth', authRoutes);
