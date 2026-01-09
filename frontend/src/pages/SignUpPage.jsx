@@ -57,7 +57,7 @@ function SignUpPage() {
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         className="input"
-                        placeholder="YourEmail@gmail.com"
+                        placeholder="Enter your email"
                       />
                     </div>
                   </div>
