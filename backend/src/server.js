@@ -14,7 +14,12 @@ const __dirname = path.resolve();
 
 const PORT = ENV.PORT || 3000;
 
-app.use(express.json()); // req.body
+// Increase JSON body size limit to handle base64-encoded profile images
+app.use(
+  express.json({
+    limit: "10mb",
+  })
+); // req.body
 
 // Ensure CLIENT_URL includes protocol for CORS
 const clientOrigin = ENV.CLIENT_URL;
