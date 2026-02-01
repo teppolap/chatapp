@@ -2,7 +2,7 @@
 
 A modern, full-stack real-time chat application built with React and Node.js, featuring instant messaging, image sharing, and real-time notifications.
 
-**Live site**: https://chatapp-23pji.sevalla.app/login
+**Live site**: https://chatapp-r1mk.onrender.com
 
 
 ![Node.js](https://img.shields.io/badge/Node.js-22.12.0+-green)
